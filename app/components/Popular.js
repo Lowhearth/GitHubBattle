@@ -66,6 +66,7 @@ class Popular extends React.Component {
 
   componentDidMount() {
     this.updateLanguage(this.state.selectedLanguage);
+
   }
 
   updateLanguage(lang) {
@@ -84,6 +85,7 @@ class Popular extends React.Component {
         }
       });
     }.bind(this));
+
 }
 
   render(){

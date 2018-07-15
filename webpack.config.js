@@ -4,7 +4,9 @@ module.exports = {
   entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index_bundle.js'
+    filename: 'index_bundle.js',
+    //root to : /
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -12,10 +14,14 @@ module.exports = {
       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
     ]
   },
+  // Serve index.html for any /XXXX
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'app/index.html'
     })
   ],
-  mode: "development"
+  mode: "development",
 };

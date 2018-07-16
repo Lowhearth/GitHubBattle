@@ -107,6 +107,10 @@ li {
   display: flex;
   justify-content: space-around;
 }
+.row li{
+  display: flex;
+  justify-content: space-around;
+}
 .column {
   display: flex;
   flex-direction: column;
@@ -130,4 +134,7 @@ li {
 .mybody {
   padding-top: 50px;
 
+}
+.space-list-items {
+  margin-bottom: 7px;
 }
